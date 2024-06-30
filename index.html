@@ -205,8 +205,8 @@ a{
 .info-p .second-popup {
     position: relative; /* Relative position for easy alignment */
     bottom: 200px; /* 200px below the first popup */
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: #2babff;
     border-radius: 50%;
     box-shadow: 0 0 40px #2babff, 0 0 40px #2babff;
@@ -214,14 +214,19 @@ a{
     opacity: 1; /* Initially visible */
 }
 
-    
 
 
 
-@media (max-width: 400px) {}
+@media (max-width: 400px) {
+   .info-p .second-popup {
+       width: 100px;
+       height: 100px;
+   }
 
-
-@media (max-width: 400px) {}
+   .info-p .popup {
+       width: 150px;
+   }
+}
 
 @media (min-width: 401px) and (max-width: 600px) {}
 
