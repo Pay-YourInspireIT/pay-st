@@ -139,7 +139,7 @@
             text-align : center;
             background: #00ffab7a;
             width: auto;
-            border-bottom: 4px solid #00ffab;
+            border-bottom: 4px solid #3bff00;
             padding: 10px;
             font-family: "Voces", sans-serif;
         }
@@ -159,10 +159,8 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            width: 197px;
-            height: 28px;
-            background-color: #f8f8f8;
-            border: 2px solid #ccc;
+            background-color: #00ffff;
+            border: 2px solid #00ffff;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1); /* Pink box shadow */
@@ -170,18 +168,57 @@
             font-family: "Voces", sans-serif;
         }
         .popup span {
-            color: #11ff00;
-            background: red;
+            color: #002dff;
             padding: 7px;
             font-size: 20px;
         }
         .popup span b{
-            color: #fff;
+            color: black;
             font-size: 15px;
         }
         .popup.show {
             display: block;
         }
+        
+        
+        
+        
+        
+        
+              .popup2 {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff0a00;
+            border: 2px solid #ff0a00;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px #ff000a, 0 0 40px #ff0a00; /* Pink box shadow */
+            z-index: 1;
+            font-family: "Voces", sans-serif;
+            
+        }
+        .popup2 span {
+            color: black;
+            padding: 7px;
+            font-size: 17px;
+        }
+        .popup2 span b{
+            color: black;
+            font-size: 15px;
+        }
+        .popup2.show {
+            display: block;
+        }  
+        
+        
+        
+        
+        
+        
+        
+        
         .very{
             margin: 0 auto;
             width: 50%;
@@ -194,7 +231,7 @@
         .very form input{
             height: 17px;
             width: 100%;
-            border-radius: 6px;
+            border-radius: 20px;
             padding: 8px;
             font-size: 19px;
             font-family: "Voces", sans-serif;
@@ -260,7 +297,7 @@
         <span class="close" onclick="closePopup()">&times; &nbsp;
         <b>Payment Not Received</b></span>
     </div>
-    <div id="blockPopup" class="popup">
+    <div id="blockPopup" class="popup2">
         <span class="close" onclick="closePopup()">&times; &nbsp;
         <b>Your Payment is Blocked</b></span>
     </div>
