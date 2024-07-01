@@ -164,6 +164,50 @@ a{
     box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1);
     transition: 1.5s
 }
+
+
+
+
+
+
+  
+
+
+
+    .alert {
+      padding: 20px;
+      background-color: #2b82ff;
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      width: calc(100% - 40px);
+      max-width: 500px;
+      box-shadow: 0 0 20px #2b82ff , 0 0 40px #2b82ff  ;
+      text-align: center;
+    }
+    
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;      
+      font-weight: bold;
+      float: right;
+      font-size: 28px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+    
 </style>
 </head>
 <body>
@@ -196,6 +240,29 @@ a{
     </div>
 
     <h6>It's me Darkness :)</h6>
+    
+    
+    
+    
+    
+      <div id="alert" class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+   <b> Note !  </b><br><br>
+    
+একাউন্ট এক্টিভ করতে 40 টাকা ডিপোজিট করতে হয়, আপনি 40 টাকা কোন মাধ্যমে পাঠাবেন, তা সিলেক্ট করুন ।  যদি বিকাশের মাধ্যমে ডিপোজিট করেন, তাহলে " bKash " এ ক্লিক করুন । নগদের মাধ্যমে করলে " Nagad " এ ক্লিক করুন । রকেটের মাধ্যমে করলে " Rocket " এ ক্লিক করুন ! 
+  </div>
+  
+  
+    
+    
+    
+    
+    
+<script>
+                window.onload = function() {
+      document.getElementById('alert').style.display = 'block';
+    };
+</script> 
 </body>
 <br><br><br><br>
 </html>
