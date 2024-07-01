@@ -121,6 +121,8 @@ a{
 .wd:hover{
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
 }
+
+
     #h22{
         font-size: 25px;
     }
@@ -128,118 +130,15 @@ a{
     
   
 
-     
-
-      .info-p .popup h2 {
-            margin-top: 0;
-            font-size: 24px;
-        }
-
-      .info-p .popup p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        @keyframes popup-animation {
-            0% { opacity: 0; transform: scale(0.7); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        @keyframes popup-close-animation {
-            0% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0; transform: scale(0.7); }
-        }
-
-      .info-p .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 50px;
-            color: white;
-            cursor: pointer;
-        }
-
-     
-
-
-
-        @keyframes circle-animation {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.2); opacity: 0; }
-        }
-
-
-
-    .info-p {
-    position: fixed; /* Fixed position to make it overlay */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Make sure it is on top */
-    flex-direction: column; /* Arrange items in column */
-    background: #000000a6;
-}
-
-.info-p:hover{
-    background: none;
-    transition: 2s;
-}
-
-
-.info-p .popup {
-    position: relative;
-    width: 600px;
-    padding: 20px;
-    background: #2babff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #2babff, 0 0 40px #2babff;
-    color: black;
-    text-align: center;
-    animation: popup-animation 0.5s ease-out forwards;
-}
-
-.info-p .second-popup {
-    position: relative; /* Relative position for easy alignment */
-    bottom: 200px; /* 200px below the first popup */
-    width: 200px;
-    height: 200px;
-    background-color: #2babff;
-    border-radius: 50%;
-    box-shadow: 0 0 40px #2babff, 0 0 40px #2babff;
-    animation: circle-animation 2s infinite alternate; /* Animation added */
-    opacity: 1; /* Initially visible */
-}
-
 
 
 
 @media (max-width: 400px) {
-   .info-p .second-popup {
-       width: 100px;
-       height: 100px;
-   }
-
-   .info-p .popup {
-       width: auto;
-      margin: 0px 10px 0px 10px;
-       
-   }
+   
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
-   .info-p .second-popup {
-       width: 150px;
-       height: 150px;
-   }
-
-   .info-p .popup {
-       width: auto;
-       margin: 0px 15px 0px 15px;
-   }
+   
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -255,33 +154,52 @@ a{
 
     
     
+  
+
+
+
+    .alert {
+      padding: 20px;
+      background-color: #ff1f00;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      width: calc(100% - 40px);
+      max-width: 500px;
+      box-shadow: 0 0 20px #ff1f00 , 0 0 40px #ff1f00  ;
+      text-align: center;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;      
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+    
 </style>
 </head>
 <body>
     
     
-        <section class="info-p">
-    
-    
-    <div class="second-popup"></div>
-    
-    <div class="popup">
-       
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2><i class="fa-solid fa-circle-info"></i>
-
- Information </h2><br>
-        <p>আপনি একজন নতুন ইউজার,  তাই দয়া করে আগে আপনি আপনার একাউন্ট এক্টিভ করুন ।  তারপর কাজ করে টাকা ইনকাম করে, এখান থেকে টাকা উইথড্র দিতে পারবেন ।  একাউন্ট এক্টিভ করতে "Active Account".  ক্লিক করুন !  </p>
         
-        
-    </div>
-    
-
-    <!-- Second popup with red circle -->
     
     
     
-    </section>
     <div class="hl">
         
         <img src="https://i.postimg.cc/nVvDBPP5/Yi-logo.png">
@@ -292,8 +210,11 @@ a{
          <h1>Select Type -</h1>
     </div>
     
+    
+    
+    
     <div class="st">
-       <a href="https://pay-yourinspireit.github.io/pay-st/account-mm"> <div class="act">
+       <a href="https://pay-yourinspireit.github.io/pay-st/account-mm"><div class="act">
             <i class="fa-solid fa-id-badge" style="color: #595959;" id="iconn"></i>
 <h2 id="h22">Active Account</h2>
         </div></a><br><br><br><br>
@@ -306,25 +227,18 @@ a{
     
     
     
-    
-
+   
+  <div id="alert" class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    এগিয়ে যেতে আপনার একাউন্টটি লগ-ইন করতে হবে..! User Id দিয়ে Next - এ ক্লিক করুন । 
+  </div>
     
     
     
     <script>
-           function closePopup() {
-    document.querySelector('.popup').style.animation = 'popup-close-animation 0.3s ease-in forwards';
-    document.querySelector('.second-popup').style.animation = 'circle-close-animation 0.3s ease-in forwards'; // New line for second popup
-    setTimeout(() => {
-        document.querySelector('.popup').style.display = 'none';
-        document.querySelector('.second-popup').style.display = 'none'; // Hide second popup after animation
-    }, 300);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.popup').style.animation = 'popup-animation 0.5s ease-out forwards';
-});
-
+            window.onload = function() {
+      document.getElementById('alert').style.display = 'block';
+    };
     </script>
 </body>
 </html>
